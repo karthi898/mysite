@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Karthik Shambuni - Personal Profile</title>
+  
+  <!-- Google Fonts for attractive typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Loader Overlay -->
+  <div id="loader">
+    <div class="loader-text">Site is building...</div>
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Main Content -->
+  <header>
+    <!-- Background image layer -->
+    <div class="header-bg"></div>
+    <div class="header-content">
+      <!-- Profile picture -->
+      <img src="https://source.unsplash.com/random/150x150?portrait" alt="Profile Picture" class="profile-pic">
+      <h1>Karthik Shambuni</h1>
+      <h2>Salesforce Vlocity Developer</h2>
+    </div>
+  </header>
+
+  <main>
+    <!-- About Section with descriptive text and an image -->
+    <section class="about">
+      <p>Hello, I'm Karthik Shambuni—a passionate Salesforce Vlocity Developer dedicated to building seamless CRM solutions. I combine innovative design with cutting-edge web technologies to craft engaging user experiences.</p>
+      <img src="https://source.unsplash.com/featured/800x400?technology" alt="Technology Image" class="about-img">
+    </section>
+
+    <!-- Social Links Section with icons -->
+    <section class="social-links">
+      <h3>Connect with Me</h3>
+      <ul>
+        <li>
+          <a href="https://linkedin.com/in/your-profile" target="_blank">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/your-profile" target="_blank">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/your-profile" target="_blank">
+            <i class="fab fa-twitter"></i>
+            <span>Twitter</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Karthik Shambuni</p>
+  </footer>
+
+  <!-- JavaScript to Remove Loader on Page Load -->
+  <script>
+    window.addEventListener("load", function () {
+      const loader = document.getElementById("loader");
+      loader.classList.add("fade-out");
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 600);
+    });
+  </script>
+</body>
+</html>

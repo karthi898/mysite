@@ -3,56 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salesforce OmniStudio Developer</title>
+    <title>Karthik Shambuni – Salesforce Developer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#blog">Blog</a></li>
-        </ul>
-    </nav>
+    <!-- Fixed header with navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section id="home">
+    <section id="home" class="hero-section">
         <div class="hero-content">
-            <h1>Karthik Shambuni</h1>
-            <p>Salesforce OmniStudio Developer | Ex- Graphic Designer</p>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog">
-        <div class="blog-container">
-            <h2>Salesforce Blog</h2>
-            <div class="blog-post">
-                <h3>OmniStudio Inspector Extension</h3>
-                <p>
-                    The OmniStudio Inspector is a streamlined Chrome extension designed for Salesforce developers.
-                    It provides lightning-fast discovery of Data Mappers, Integration Procedures, OmniScripts, FlexCards,
-                    and Flows within your org. Key highlights include:<br><br>
-                    • Comprehensive Flow support: grouped by Flow name with version sorting and colour-coded status indicators.<br>
-                    • Robust error handling and URL validation for seamless API calls.<br>
-                    • Detailed insights for OmniScripts including Language and combined Type/SubType columns.<br>
-                    • Per‑org caching and settings to keep your data isolated across instances.<br>
-                    • Quick actions to open components directly in Lightning or Classic designers.<br><br>
-                    Stay tuned for more Salesforce insights and tutorials in this space!
-                </p>
+            <div class="hero-text">
+                <h1>Karthik Shambuni</h1>
+                <p>Salesforce OmniStudio Developer&nbsp;|&nbsp;Ex‑Graphic Designer</p>
             </div>
-            <!-- To add a new blog post, duplicate the div below and update the title and content -->
-            <!--
-            <div class="blog-post">
-                <h3>Your Blog Title Here</h3>
-                <p>
-                    Your blog content goes here. Keep it concise and informative. You can also include
-                    lists, links, and other HTML elements as needed.
-                </p>
+            <div class="hero-image">
+                <img src="assets/hero-bg.png" alt="Sleek abstract background">
             </div>
-            -->
         </div>
     </section>
 
@@ -63,21 +39,43 @@
             <div class="skills-grid">
                 <div class="skill-card">
                     <h3>OmniStudio</h3>
-                    <p>Expert in OmniScripts, FlexCards, and Integration Procedures</p>
+                    <p>Expert in OmniScripts, FlexCards and Integration Procedures</p>
                 </div>
                 <div class="skill-card">
                     <h3>Salesforce</h3>
-                    <p>Certified Developer with Apex & Lightning expertise</p>
+                    <p>Certified developer with Apex &amp; Lightning expertise</p>
                 </div>
                 <div class="skill-card">
                     <h3>Web Development</h3>
-                    <p>HTML, CSS, JavaScript & LWC</p>
+                    <p>HTML, CSS, JavaScript &amp; LWC</p>
                 </div>
                 <div class="skill-card">
                     <h3>Integration</h3>
-                    <p>REST/SOAP APIs & Data Mapping</p>
+                    <p>REST/SOAP APIs &amp; Data Mapping</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <div class="blog-container">
+            <h2>Salesforce Blog</h2>
+            <div class="blog-post">
+                <h3>OmniStudio Inspector Extension</h3>
+                <p>
+                    The OmniStudio Inspector is a streamlined Chrome extension designed for Salesforce developers. It provides lightning‑fast discovery of Data Mappers, Integration Procedures, OmniScripts, FlexCards and Flows within your org. Key highlights include:
+                </p>
+                <ul>
+                    <li>Comprehensive Flow support – grouped by name with version sorting and colour‑coded status indicators</li>
+                    <li>Robust error handling and URL validation for seamless API calls</li>
+                    <li>Detailed insights for OmniScripts including Language and combined Type/SubType columns</li>
+                    <li>Per‑org caching and settings to keep your data isolated across instances</li>
+                    <li>Quick actions to open components directly in Lightning or Classic designers</li>
+                </ul>
+                <p>Stay tuned for more Salesforce insights and tutorials in this space!</p>
+            </div>
+            <!-- Duplicate the blog-post block above to add more articles in the future -->
         </div>
     </section>
 

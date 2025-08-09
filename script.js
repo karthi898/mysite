@@ -1,5 +1,6 @@
-// Smooth Scrolling
 // Smooth scrolling for internal navigation
+const header = document.querySelector('header');
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -8,4 +9,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             target.scrollIntoView({ behavior: 'smooth' });
         }
     });
+});
+
+// Header shadow on scroll
+window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 50);
 });

@@ -3,136 +3,303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karthik Shambuni – Salesforce & Software Engineer</title>
-    <meta name="description" content="Portfolio of Karthik Shambuni, a Salesforce and software engineer specializing in OmniStudio and modern web development.">
+    <title>Karthik Shambuni - Salesforce &amp; Software Engineer</title>
+    <meta
+        name="description"
+        content="Portfolio of Karthik Shambuni, a Salesforce and software engineer specializing in OmniStudio and modern web development."
+    >
+    <meta name="theme-color" content="#f3eee5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet"
+    >
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Fixed header with navigation -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="page-glow page-glow--one" aria-hidden="true"></div>
+    <div class="page-glow page-glow--two" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+        <div class="container header-bar">
+            <a class="brand" href="#home" aria-label="Karthik Shambuni home">
+                <span class="brand__mark">KS</span>
+                <span class="brand__text">Karthik Shambuni</span>
+            </a>
+
+            <button
+                class="nav-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="site-nav"
+                aria-label="Toggle navigation"
+                data-nav-toggle
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="site-nav" class="site-nav" data-nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
+                <a class="nav-cta" href="#contact">Let's Talk</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Karthik Shambuni</h1>
-                <p>Salesforce &amp; Software Engineer crafting thoughtful digital experiences.</p>
-            </div>
-            <div class="hero-image">
-                <img src="https://source.unsplash.com/1200x800/?minimal,technology" alt="Clean abstract technology background">
-            </div>
-        </div>
-    </section>
+    <main>
+        <section id="home" class="hero section">
+            <div class="hero-lines" aria-hidden="true"></div>
+            <div class="container hero-layout">
+                <div class="hero-copy" data-reveal>
+                    <p class="eyebrow">Salesforce, OmniStudio, Web Engineering</p>
+                    <h1>
+                        <span>Karthik</span>
+                        <span>Shambuni</span>
+                    </h1>
+                    <p class="hero-lead">Salesforce &amp; Software Engineer crafting thoughtful digital experiences.</p>
+                    <p class="hero-support">
+                        I'm a Salesforce OmniStudio specialist and software engineer who loves transforming ideas into
+                        streamlined applications. My background in design helps me build interfaces that feel as good
+                        as they look.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button button--primary" href="#projects">View Projects</a>
+                        <a class="button button--secondary" href="#contact">Get in Touch</a>
+                    </div>
+                    <ul class="hero-highlights" aria-label="Core capabilities">
+                        <li>OmniStudio</li>
+                        <li>Salesforce</li>
+                        <li>Web Development</li>
+                        <li>Integration</li>
+                    </ul>
+                </div>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="about-container">
-            <div class="about-image">
-                <img src="https://source.unsplash.com/400x400/?portrait" alt="Portrait of Karthik Shambuni">
-            </div>
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>
-                    I'm a Salesforce OmniStudio specialist and software engineer who loves transforming ideas into streamlined applications.
-                    My background in design helps me build interfaces that feel as good as they look.
-                </p>
-            </div>
-        </div>
-    </section>
+                <div class="hero-visual" data-reveal data-parallax-root>
+                    <div class="hero-orb hero-orb--amber" aria-hidden="true"></div>
+                    <div class="hero-orb hero-orb--teal" aria-hidden="true"></div>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="skills-container">
-            <h2>My Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>OmniStudio</h3>
-                    <p>Expert in OmniScripts, FlexCards and Integration Procedures</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Salesforce</h3>
-                    <p>Certified developer with Apex &amp; Lightning expertise</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Web Development</h3>
-                    <p>HTML, CSS, JavaScript &amp; LWC</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Integration</h3>
-                    <p>REST/SOAP APIs &amp; Data Mapping</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <article class="visual-card visual-card--main panel" data-parallax="0.12">
+                        <div class="visual-card__media">
+                            <img src="assets/hero-bg.png" alt="" aria-hidden="true">
+                            <div class="visual-card__mesh" aria-hidden="true"></div>
+                            <div class="visual-card__badge">Design-minded engineering</div>
+                        </div>
+                        <div class="visual-card__body">
+                            <p class="mini-label">Focused craft</p>
+                            <h2>Streamlined systems for teams that move fast.</h2>
+                            <p>
+                                OmniScripts, FlexCards, Integration Procedures, Apex, Lightning and modern frontend
+                                delivery working together in one polished workflow.
+                            </p>
+                        </div>
+                    </article>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="projects-container">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="https://source.unsplash.com/600x400/?app" alt="Project screenshot">
-                    <h3>OmniStudio Toolkit</h3>
-                    <p>Utilities that accelerate Salesforce development and debugging.</p>
-                </div>
-                <div class="project-card">
-                    <img src="https://source.unsplash.com/600x400/?code" alt="Project screenshot">
-                    <h3>Portfolio Website</h3>
-                    <p>Responsive site built with vanilla HTML, CSS and JavaScript featuring smooth scrolling.</p>
-                </div>
-                <div class="project-card">
-                    <img src="https://source.unsplash.com/600x400/?cloud" alt="Project screenshot">
-                    <h3>Integration Layer</h3>
-                    <p>Middleware for connecting legacy systems with modern Salesforce APIs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <div class="floating-panel floating-panel--one panel" data-parallax="0.24">
+                        <span>OmniStudio Toolkit</span>
+                        <strong>Utilities that accelerate development and debugging.</strong>
+                    </div>
 
-    <!-- Blog Section -->
-    <section id="blog">
-        <div class="blog-container">
-            <h2>Salesforce Blog</h2>
-            <div class="blog-post">
-                <h3>OmniStudio Inspector Extension</h3>
-                <p>
-                    The OmniStudio Inspector is a streamlined Chrome extension designed for Salesforce developers. It provides lighting-fast discovery of Data Mappers, Integration Procedures, OmniScripts, FlexCards and Flows within your org. Key highlights include:
-                </p>
-                <ul>
-                    <li>Comprehensive Flow support – grouped by name with version sorting and colour-coded status indicators</li>
-                    <li>Robust error handling and URL validation for seamless API calls</li>
-                    <li>Detailed insights for OmniScripts including Language and combined Type/SubType columns</li>
-                    <li>Per-org caching and settings to keep your data isolated across instances</li>
-                    <li>Quick actions to open components directly in Lightning or Classic designers</li>
-                </ul>
-                <p>Stay tuned for more Salesforce insights and tutorials in this space!</p>
+                    <div class="floating-panel floating-panel--two panel" data-parallax="0.18">
+                        <span>Integration Layer</span>
+                        <strong>Legacy systems connected with modern Salesforce APIs.</strong>
+                    </div>
+                </div>
             </div>
-            <!-- Duplicate the blog-post block above to add more articles in the future -->
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="contact-container">
-            <h2>Get in Touch</h2>
-            <p>Let's create something amazing together!</p>
-            <div class="contact-links">
-                <a href="mailto:karthikshambuni@hotmail.com">Email</a>
-                <a href="https://www.linkedin.com/in/karthik-s88" target="_blank" rel="noopener">LinkedIn</a>
+        <section id="about" class="section section--soft">
+            <div class="container">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow">About</p>
+                    <h2>Building useful software with a product designer's eye.</h2>
+                </div>
+
+                <div class="about-grid">
+                    <article class="about-identity panel" data-reveal>
+                        <div class="about-identity__glow" aria-hidden="true"></div>
+                        <p class="mini-label">Profile</p>
+                        <div class="about-identity__mark">KS</div>
+                        <p class="about-identity__role">Salesforce OmniStudio specialist and software engineer</p>
+                        <ul class="about-identity__list">
+                            <li>OmniScripts, FlexCards and Integration Procedures</li>
+                            <li>Certified developer with Apex &amp; Lightning expertise</li>
+                            <li>HTML, CSS, JavaScript &amp; LWC</li>
+                            <li>REST/SOAP APIs &amp; Data Mapping</li>
+                        </ul>
+                    </article>
+
+                    <article class="about-story panel" data-reveal>
+                        <p class="mini-label">About Me</p>
+                        <p>
+                            I'm a Salesforce OmniStudio specialist and software engineer who loves transforming ideas
+                            into streamlined applications.
+                        </p>
+                        <p>
+                            My background in design helps me build interfaces that feel as good as they look.
+                        </p>
+                    </article>
+                </div>
             </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow">Skills</p>
+                    <h2>Technical depth balanced with clean execution.</h2>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card panel" data-reveal data-tilt>
+                        <p class="skill-card__index">01</p>
+                        <h3>OmniStudio</h3>
+                        <p>Expert in OmniScripts, FlexCards and Integration Procedures</p>
+                    </article>
+
+                    <article class="skill-card panel" data-reveal data-tilt>
+                        <p class="skill-card__index">02</p>
+                        <h3>Salesforce</h3>
+                        <p>Certified developer with Apex &amp; Lightning expertise</p>
+                    </article>
+
+                    <article class="skill-card panel" data-reveal data-tilt>
+                        <p class="skill-card__index">03</p>
+                        <h3>Web Development</h3>
+                        <p>HTML, CSS, JavaScript &amp; LWC</p>
+                    </article>
+
+                    <article class="skill-card panel" data-reveal data-tilt>
+                        <p class="skill-card__index">04</p>
+                        <h3>Integration</h3>
+                        <p>REST/SOAP APIs &amp; Data Mapping</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section section--soft">
+            <div class="container">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow">Projects</p>
+                    <h2>Selected work shaped around speed, clarity and reliability.</h2>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card panel" data-reveal data-tilt>
+                        <div class="project-card__visual project-card__visual--toolkit" aria-hidden="true">
+                            <span>01</span>
+                        </div>
+                        <div class="project-card__content">
+                            <p class="mini-label">Featured Project</p>
+                            <h3>OmniStudio Toolkit</h3>
+                            <p>Utilities that accelerate Salesforce development and debugging.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card panel" data-reveal data-tilt>
+                        <div class="project-card__visual project-card__visual--portfolio" aria-hidden="true">
+                            <span>02</span>
+                        </div>
+                        <div class="project-card__content">
+                            <p class="mini-label">Featured Project</p>
+                            <h3>Portfolio Website</h3>
+                            <p>
+                                Responsive site built with vanilla HTML, CSS and JavaScript featuring smooth
+                                scrolling.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project-card panel" data-reveal data-tilt>
+                        <div class="project-card__visual project-card__visual--integration" aria-hidden="true">
+                            <span>03</span>
+                        </div>
+                        <div class="project-card__content">
+                            <p class="mini-label">Featured Project</p>
+                            <h3>Integration Layer</h3>
+                            <p>Middleware for connecting legacy systems with modern Salesforce APIs.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="section">
+            <div class="container">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow">Blog</p>
+                    <h2>Salesforce notes, tools and practical implementation details.</h2>
+                </div>
+
+                <div class="blog-layout">
+                    <aside class="blog-aside panel" data-reveal>
+                        <p class="mini-label">Current Focus</p>
+                        <h3>Salesforce Blog</h3>
+                        <p>
+                            Stay tuned for more Salesforce insights and tutorials in this space.
+                        </p>
+                    </aside>
+
+                    <article class="blog-post panel" data-reveal>
+                        <p class="mini-label">Latest Article</p>
+                        <h3>OmniStudio Inspector Extension</h3>
+                        <p>
+                            The OmniStudio Inspector is a streamlined Chrome extension designed for Salesforce
+                            developers. It provides lighting-fast discovery of Data Mappers, Integration Procedures,
+                            OmniScripts, FlexCards and Flows within your org. Key highlights include:
+                        </p>
+                        <ul>
+                            <li>Comprehensive Flow support - grouped by name with version sorting and colour-coded status indicators</li>
+                            <li>Robust error handling and URL validation for seamless API calls</li>
+                            <li>Detailed insights for OmniScripts including Language and combined Type/SubType columns</li>
+                            <li>Per-org caching and settings to keep your data isolated across instances</li>
+                            <li>Quick actions to open components directly in Lightning or Classic designers</li>
+                        </ul>
+                        <p>Stay tuned for more Salesforce insights and tutorials in this space!</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section--soft">
+            <div class="container">
+                <div class="contact-panel panel" data-reveal>
+                    <div class="contact-copy">
+                        <p class="eyebrow">Contact</p>
+                        <h2>Get in Touch</h2>
+                        <p>Let's create something amazing together!</p>
+                    </div>
+
+                    <div class="contact-links">
+                        <a class="button button--primary" href="mailto:karthikshambuni@hotmail.com">Email</a>
+                        <a
+                            class="button button--secondary"
+                            href="https://www.linkedin.com/in/karthik-s88"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container site-footer__inner">
+            <p>Karthik Shambuni</p>
+            <p>Salesforce &amp; Software Engineer</p>
         </div>
-    </section>
+    </footer>
 
     <script src="script.js"></script>
 </body>

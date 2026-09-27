@@ -23,6 +23,7 @@ export default function App() {
             <a href="#home" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Home</a>
             <a href="#about" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">About</a>
             <a href="#skills" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Skills</a>
+            <a href="#services" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Services</a>
             <a href="#projects" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Projects</a>
             <a href="#contact" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Contact</a>
           </div>

@@ -1,6 +1,9 @@
 import React from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Code, Cpu, Zap, Database, Layout, Terminal } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Code, Cpu, Zap, Database, Layout, Terminal, Check, CalendarDays } from 'lucide-react';
 import { motion } from 'motion/react';
+
+// Replace with your Calendly / Cal.com link once it's set up.
+export const BOOKING_URL = "mailto:karthikshambuni@hotmail.com?subject=Discovery%20call%20request";
 
 export default function LandingPage() {
   const skills = [
@@ -14,6 +17,45 @@ export default function LandingPage() {
     { title: "OmniStudio Toolkit", desc: "Utilities that accelerate Salesforce development and debugging." },
     { title: "Portfolio Website", desc: "Responsive site built with vanilla HTML, CSS and JavaScript featuring smooth scrolling." },
     { title: "Integration Layer", desc: "Middleware for connecting legacy systems with modern Salesforce APIs." }
+  ];
+
+  const services = [
+    {
+      name: "OmniStudio Health Check",
+      price: "$300",
+      unit: "fixed",
+      desc: "A review of your OmniScripts, FlexCards and Integration Procedures with a prioritised fix list.",
+      points: ["Performance & governor-limit review", "Best-practice and naming audit", "Written report + 1-hour walkthrough"],
+    },
+    {
+      name: "Journey Build",
+      price: "from $1,200",
+      unit: "per journey",
+      desc: "One end-to-end customer journey built with OmniScript and FlexCards, ready for UAT.",
+      points: ["OmniScript + FlexCards", "DataRaptors & Integration Procedures", "Deployment and handover docs"],
+      featured: true,
+    },
+    {
+      name: "API Integration",
+      price: "from $900",
+      unit: "per integration",
+      desc: "Connect Salesforce to an external system using Integration Procedures, Apex and REST/SOAP.",
+      points: ["Named credentials & auth setup", "Data mapping and error handling", "Test coverage included"],
+    },
+    {
+      name: "Vlocity → OmniStudio Migration",
+      price: "Custom quote",
+      unit: "after assessment",
+      desc: "Move managed-package Vlocity components to standard OmniStudio with minimal disruption.",
+      points: ["Component inventory & plan", "Migration and regression testing", "Team knowledge transfer"],
+    },
+    {
+      name: "Monthly Support",
+      price: "$600",
+      unit: "per month",
+      desc: "Ongoing help for fixes, small enhancements and questions from your team.",
+      points: ["Up to 20 hours per month", "Priority response within 1 business day", "Cancel anytime"],
+    },
   ];
 
   return (
@@ -34,7 +76,7 @@ export default function LandingPage() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
               </span>
-              Available for new projects
+              Available for OmniStudio projects
             </div>
             <h1 className="text-6xl md:text-8xl font-display font-bold tracking-tight leading-[0.9]">
               Karthik <br />
@@ -52,16 +94,16 @@ export default function LandingPage() {
             className="flex flex-wrap gap-4"
           >
             <a 
-              href="#contact" 
+              href={BOOKING_URL}
               className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-medium transition-all shadow-lg shadow-blue-900/20"
             >
-              Get in Touch
+              Book a Free Call
             </a>
             <a 
-              href="#projects" 
+              href="#services" 
               className="px-8 py-4 bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 text-zinc-300 rounded-full font-medium transition-all"
             >
-              View Projects
+              View Services
             </a>
           </motion.div>
         </div>
@@ -127,6 +169,62 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section id="services" className="py-24 px-6 border-t border-zinc-900">
+        <div className="max-w-5xl mx-auto space-y-12">
+          <div className="space-y-4">
+            <h2 className="text-sm font-mono text-blue-500 uppercase tracking-widest">Services</h2>
+            <h3 className="text-3xl md:text-4xl font-display font-bold">Fixed-scope Salesforce OmniStudio packages.</h3>
+            <p className="text-zinc-400 text-lg max-w-2xl">
+              Clear scope, clear price. Not sure which fits? Book a free 20-minute call and we'll work it out.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, i) => (
+              <div
+                key={i}
+                className={`flex flex-col p-8 rounded-3xl border transition-all ${
+                  service.featured
+                    ? "bg-blue-600/10 border-blue-500/50"
+                    : "bg-zinc-900/50 border-zinc-800 hover:border-blue-500/50"
+                }`}
+              >
+                {service.featured && (
+                  <span className="self-start mb-4 px-3 py-1 rounded-full bg-blue-600 text-white text-xs font-medium">Most popular</span>
+                )}
+                <h4 className="text-xl font-display font-bold">{service.name}</h4>
+                <div className="mt-3 mb-4">
+                  <span className="text-3xl font-display font-bold">{service.price}</span>
+                  <span className="text-zinc-500 text-sm ml-2">{service.unit}</span>
+                </div>
+                <p className="text-zinc-400 text-sm leading-relaxed mb-6">{service.desc}</p>
+                <ul className="space-y-2 text-sm text-zinc-300 mb-8">
+                  {service.points.map((point, j) => (
+                    <li key={j} className="flex items-start gap-2">
+                      <Check className="w-4 h-4 text-blue-400 mt-0.5 shrink-0" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={BOOKING_URL}
+                  className={`mt-auto text-center px-6 py-3 rounded-full font-medium transition-all ${
+                    service.featured
+                      ? "bg-blue-600 hover:bg-blue-500 text-white"
+                      : "bg-zinc-800 hover:bg-zinc-700 text-zinc-200"
+                  }`}
+                >
+                  Book a call
+                </a>
+              </div>
+            ))}
+          </div>
+          <p className="text-zinc-500 text-sm">
+            Prices in USD. Final quote confirmed after a short scoping call.
+          </p>
+        </div>
+      </section>
+
       {/* Projects Section */}
       <section id="projects" className="py-24 px-6 bg-zinc-900/30">
         <div className="max-w-5xl mx-auto space-y-12">
@@ -158,6 +256,13 @@ export default function LandingPage() {
             <h3 className="text-4xl md:text-6xl font-display font-bold">Let's create something amazing together.</h3>
           </div>
           <div className="flex flex-wrap justify-center gap-6">
+            <a 
+              href={BOOKING_URL}
+              className="flex items-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-500 rounded-full transition-all text-lg font-medium text-white"
+            >
+              <CalendarDays className="w-6 h-6" />
+              Book a Call
+            </a>
             <a 
               href="mailto:karthikshambuni@hotmail.com"
               className="flex items-center gap-3 px-8 py-4 bg-zinc-900 border border-zinc-800 rounded-full hover:bg-zinc-800 transition-all text-lg font-medium"

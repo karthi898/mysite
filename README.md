@@ -18,3 +18,13 @@ View your app in AI Studio: https://ai.studio/apps/d90d72fd-e0b7-4027-928b-4cf33
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+## Deploy
+
+Pushes to `main` build the app and publish it to GitHub Pages at
+[karthikshambuni.in](https://karthikshambuni.in) via `.github/workflows/deploy.yml`.
+
+- Settings → Pages → Source must be set to **GitHub Actions**.
+- The KayAI chat reads `GEMINI_API_KEY` from the repo's Actions secrets at build time.
+  The key ends up in the public JavaScript bundle, so use a restricted key.
+- The previous SUPRKAY landing page is kept at `/suprkay.html`.
